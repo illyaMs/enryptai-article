@@ -1,16 +1,55 @@
-\documentclass[a4paper,onecolumn,twoside,12pt]{article}
-\usepackage[english,russian]{babel}
+\documentclass{article}
+
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+
+\title{Using ML For Generating Cryptographic functions}
+
+
+\author{
+  David S.~Hippocampus\thanks{Use footnote for providing further
+    information about author (webpage, alternative
+    address)---\emph{not} for acknowledging funding agencies.} \\
+  Department of Computer Science\\
+  Cranberry-Lemon University\\
+  Pittsburgh, PA 15213 \\
+  \texttt{hippo@cs.cranberry-lemon.edu} \\
+  %% examples of more authors
+   \And
+ Elias D.~Striatum \\
+  Department of Electrical Engineering\\
+  Mount-Sheikh University\\
+  Santa Narimana, Levand \\
+  \texttt{stariate@ee.mount-sheikh.edu} \\
+  %% \AND
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+  %% \And
+  %% Coauthor \\
+  %% Affiliation \\
+  %% Address \\
+  %% \texttt{email} \\
+}
 
 \begin{document}
-\thispagestyle{empty}
-
-
-Using ML For Generating Cryptographic 
-functions
-(working title)
-   
-
-
+\maketitle
 
 \begin{abstract}
 In this paper we unite machine learning 
@@ -23,11 +62,12 @@ properties. Neural network for making pseudorandom
 function is developed. This function 
 used as round function in Feistel Network, which 
  we finally test on NIST test battery.
+\end{abstract}
 
 
-\end{abstract} 
+% keywords can be removed
+\keywords{First keyword \and Second keyword \and More}
 
-\tableofcontents
 
 \section{Introduction}
 
@@ -90,9 +130,8 @@ researchers of whole world trying to find
 
 \section{Conclusion}
 
-\begin{thebibliography}{3}
-	\bibitem{NMSN} <<Nothing up my sleeve number>> wiki article
-\end{thebibliography}
 
+\bibliographystyle{unsrt}
+\bibliography{references}
 
 \end{document}
