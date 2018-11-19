@@ -117,8 +117,72 @@ researchers of whole world trying to find
 
 
 \section{Problem of generating good cryptographic functions}
+From ancient times to nowadays 
+many different types of 
+cryptographic attacks were presented.
+That's why cypher's developers very carefully 
+selected cypher's parameters. 
+Widely distributed (but, obviously, 
+not absolutily reliable)
+method of proving new cipher's security is 
+trying to apply to it all 
+known attacks. Impossibility
+of applying all these attacks 
+with acceptable time and data complexity
+gives grounds to consider the cipher as
+stable one. 
+
+This method has a lot of 
+obvious defects. 
+On the one hand, many variety 
+of new attacks developed 
+every year (and not all of them 
+are published). On the other hand, 
+when developer examined cipher made
+himself, he could miss some 
+cipher's vulnerability. So 
+you cannot say about 
+absolute security.
+
+Another look for cipher's security
+if to make its encryption function 
+indistinguishable from 
+random substitution. 
+
+But in ML... 
 
 \section{Feisteil Network}
+
+
+For our experiments we chose the 
+Feisteil Network scheme. This scheme 
+first published in []. It uses in previous 
+international standard DES [] and present
+widely used algorithm GOST28147-89 []. 
+Now we'll give a brief discription of the scheme.
+
+Denote 
+$X = (x_n, x_{n-1}, \dots, x_0), x_i \in \{0,1\}, i = 0, 1, \dots, n-1$ as
+ input text, and 
+$n$ as (so, also a cipher text) size.
+
+One {\it round} of the scheme is to 
+modify input text  $X = (X_l, X_r)$ 
+to $$(X_r, X_l \oplus f(X_r, k)).$$
+
+Scheme has fixed number of rounds, which 
+we denote as $R$. 
+Input of first round is the input text.
+For other rounds input is the output of 
+previous round. Cipher text is the output 
+of the last ($R$-th) round.
+
+
+then modify right part $X_r$ with 
+function $f:V_{n/2}\rightarrow V_{n/2}$ and 
+round key $k\in V_{n/2}$.
+
+
 
 \section{Chapter about ML which we use}
 
@@ -134,4 +198,6 @@ researchers of whole world trying to find
 \bibliographystyle{unsrt}
 \bibliography{references}
 
+	\bibitem{NMSN} <<Nothing up my sleeve number>> wiki article
+    
 \end{document}
