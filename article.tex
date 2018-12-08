@@ -13,6 +13,9 @@
 \usepackage{microtype}      % microtypography
 \usepackage{lipsum}
 
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+
 \title{Using ML For Generating Cryptographic functions}
 
 
@@ -52,6 +55,7 @@
 \maketitle
 
 \begin{abstract}
+TODO: read and review
 In this paper we unite machine learning 
 and cryptography: using ML methods 
 trying to solve one of the 
@@ -64,13 +68,12 @@ used as round function in Feistel Network, which
  we finally test on NIST test battery.
 \end{abstract}
 
+\keywords{Cryptography \and Machine Learning \and Reinforcement Learning \and Privacy}
 
-% keywords can be removed
-\keywords{First keyword \and Second keyword \and More}
 
 
 \section{Introduction}
-
+TODO: read and review
 Cryptography is widely used in
 information security. 
 Everyone is using it in messagers, shops, 
@@ -115,8 +118,13 @@ researchers of whole world trying to find
 
 
 
+\section{Symmetric encryption basics}
+TODO...
 
-\section{Problem of generating good cryptographic functions}
+
+
+\section{Problem statement}
+TODO: read and review
 From ancient times to nowadays 
 many different types of 
 cryptographic attacks were presented.
@@ -149,11 +157,19 @@ if to make its encryption function
 indistinguishable from 
 random substitution. 
 
-But in ML... 
-
-\section{Feisteil Network}
 
 
+\section{Reinforcement Learning}
+TODO...
+
+
+
+\section{Solution}
+\subsection{Main idea}
+TODO: (general words about combining encryption and ML)...
+
+\subsection{Feisteil Network}
+TODO: read and review
 For our experiments we chose the 
 Feisteil Network scheme. This scheme 
 first published in []. It uses in previous 
@@ -182,22 +198,59 @@ then modify right part $X_r$ with
 function $f:V_{n/2}\rightarrow V_{n/2}$ and 
 round key $k\in V_{n/2}$.
 
+TODO: in our experiments we used the following settings:
+Block size - 64 bit (2 x 32)
+Rounds number - 16
+
+\subsection{Neural network architecture}
+TODO...
+Deep fully connected network (8 layers), activation function - SELU
+Stochastic computation graph
+
+\subsection{Optimization approach}
+TODO (Stochastic Policy Gradients, REINFORCE???)...
+
+\subsection{Reward function}
+TODO...
+consists of 3 components, each corresponding to a class of well-known attacks on cryptographic functions:
+Attack on related open texts
+Attack on related keys
+Attack on related encrypted texts
+
+\subsection{Putting pieces together}
+\includegraphics[scale=1]{img/NFM_learing.png}
 
 
-\section{Chapter about ML which we use}
 
-\section{Applying methods from previous chapter in cryptography (main chapter)}
+\section{Experiments}
+\subsection{Test methodology}
+TODO...
+Input text data - 10 million Twitter messages
+Randomly generated round keys
 
-\section{Methodology of testing and tests' results}
+\subsection{Validation}
+TODO...
+\includegraphics[scale=1]{img/NFM_validation.png}
 
-\section{Thoughts about tests' results}
+\subsection{Results}
+TODO...
+\includegraphics[scale=1]{img/learning_curve.png}
+\includegraphics[scale=1]{img/result_nfm.png}
+\includegraphics[scale=1]{img/result_blowfish.png}
+
+
+
+\section{Thoughts on further development}
+TODO...
+
+
 
 \section{Conclusion}
+TODO...
+
 
 
 \bibliographystyle{unsrt}
 \bibliography{references}
 
-	\bibitem{NMSN} <<Nothing up my sleeve number>> wiki article
-    
 \end{document}
